@@ -12,25 +12,32 @@ The file should not be of a later version than the Napoleo compiler, but may be 
 Now, let us create a block:
 
 (Main){
+
 }
 
 We now have an empty block named "Main".
 Let's add the first value field:
 
 (Main){
+
   (field1)(57)
+  
 }
 
 Main now contains a value named "field", equal to 57.
 You may define values as strings, like shown above, blocks, like "Main" in this example, or lists:
 
 (Main){
+
   (mylist)(three values here)
+  
   //A commentary
+  
   /**A block commentary. 
   Commentaries are ignored by the compiler.
   Thus, they don't need indents and can contain almost anything: 
  %^#&(@), etc. The following will close this commentary. **/
+ 
 }
 
 In fact, nothing really needs indents in Napoleo.
@@ -67,13 +74,11 @@ The third argument is not necessary as well. It indicates special types of creat
 
 Here's how it can be accessed:
 
-
-from Oui import *
-example = NAPOLEO(source, precompile, note)
 value = example.get("Main.field1")
-flag0 = example.tree[Main[flags]][0]
 
 get(...) allows to quickly reach the value or block by path - keys, divided py dots.
-In some cases reading the tree directly may be useful - the tree of Napoleo is a dictionery, containing other dictionaries etc.
+In some cases reading the tree directly may be useful - the tree of Napoleo is a dictionery, containing other dictionaries etc:
+
+flag0 = example.tree[Main[flags]][0]
 
 Napoleo objects also have such attributes as name and version.
