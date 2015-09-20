@@ -11,37 +11,36 @@ The file should not be of a later version than the Napoleo compiler, but may be 
 
 Now, let us create a block:
 
-> (Main){
->>
-> }
+(Main){
+}
 
 We now have an empty block named "Main".
 Let's add the first value field:
 
-> (Main){
->   (field1)(57)
-> }
+(Main){
+  (field1)(57)
+}
 
 Main now contains a value named "field", equal to 57.
 You may define values as strings, like shown above, blocks, like "Main" in this example, or lists:
 
-> (Main){
->>   (mylist)(three values here)
->>   //A commentory
->>   /*A block commentory
->>   Commentaries are ignored by the compiler.
->>   Thus, they don't need indents and can contain almost anything:
-> %^#&*(@), etc. The following will close this commentary. */
-> }
+(Main){
+  (mylist)(three values here)
+  //A commentory
+  /*A block commentory
+  Commentaries are ignored by the compiler.
+  Thus, they don't need indents and can contain almost anything:
+%^#&*(@), etc. The following will close this commentary. */
+}
 
 In fact, nothing really needs indents in Napoleo.
 Actually, this is pretty much all you need to know for working with Napoleo!
 
 Another useful feature is placing flags:
 
-> (Main){
->>   <anything>
-> }
+(Main){
+  <anything>
+}
 
 When a value cannot be defined by some category, for example, in case it does not belong to all the objects of you data file, it is better to save this value as a flag. You may define an unlimited ammount of flags for any block.
 
@@ -51,16 +50,16 @@ Now let's see how to operate with your new Oui file.
 
 In your Python 3 code import Napoleo:
 
-> from Oui import NAPOLEO
+from Oui import NAPOLEO
 
 You may use the import all operation:
 
-> from Oui import *
+from Oui import *
 
 However, you will most likely only need the NAPOLEO class.
 First of all, you should create a new NAPOLEO object:
 
-> example = NAPOLEO(source, precompile, note)
+example = NAPOLEO(source, precompile, note)
 
 Now, this is important: you have to define the location of your Oui file, like "E:\\Napoleo\\Example.oui" (for Windows; file directory would look different on Mac and Linux). 
 The second argument is optional: this is the directory of a *.cdf compiled file, which by defauld would have the name and directory of your Oui file. 
@@ -69,10 +68,10 @@ The third argument is not necessary as well. It indicates special types of creat
 Here's how it can be accessed:
 
 
-> from Oui import *
-> example = NAPOLEO(source, precompile, note)
-> value = example.get("Main.field1")
-> flag0 = example.tree[Main[flags]][0]
+from Oui import *
+example = NAPOLEO(source, precompile, note)
+value = example.get("Main.field1")
+flag0 = example.tree[Main[flags]][0]
 
 get(...) allows to quickly reach the value or block by path - keys, divided py dots.
 In some cases reading the tree directly may be useful - the tree of Napoleo is a dictionery, containing other dictionaries etc.
