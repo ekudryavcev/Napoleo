@@ -12,6 +12,7 @@ The file should not be of a later version than the Napoleo compiler, but may be 
 Now, let us create a block:
 
 > (Main){
+>>
 > }
 
 We now have an empty block named "Main".
@@ -25,11 +26,11 @@ Main now contains a value named "field", equal to 57.
 You may define values as strings, like shown above, blocks, like "Main" in this example, or lists:
 
 > (Main){
->   (mylist)(three values here)
->   //A commentory
->   /*A block commentory
->   Commentaries are ignored by the compiler.
->   Thus, they don't need indents and can contain almost anything:
+>>   (mylist)(three values here)
+>>   //A commentory
+>>   /*A block commentory
+>>   Commentaries are ignored by the compiler.
+>>   Thus, they don't need indents and can contain almost anything:
 > %^#&*(@), etc. The following will close this commentary. */
 > }
 
@@ -39,7 +40,7 @@ Actually, this is pretty much all you need to know for working with Napoleo!
 Another useful feature is placing flags:
 
 > (Main){
->   <anything>
+>>   <anything>
 > }
 
 When a value cannot be defined by some category, for example, in case it does not belong to all the objects of you data file, it is better to save this value as a flag. You may define an unlimited ammount of flags for any block.
