@@ -1,0 +1,25 @@
+(napoleoversion)(3.1.4)
+//This is a commentary
+
+//This is an information block
+(Name){
+  //Indent isn't necessary, but recommended
+  (block1){
+    //Field name and its value
+    (field1)(1)
+    (field2)(2 abcde)
+    (field3)(1 2 3)
+    <flag1>
+    <flag2>
+    (field4:fieldnote1)(3.25)
+  }
+}
+
+
+/*
+This is a block commentary
+Later this data can be read after being precompiled to *.cdf by this method:
+Example.oui('Name.block1.field2')[1]
+This will return the second of field2 values - "abcde". More information and tutorial in
+README.
+*/
