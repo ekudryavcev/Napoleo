@@ -24,14 +24,14 @@ Let's add the first value field:
 Main now contains a value named "field", equal to 57.
 You may define values as strings, like shown above, blocks, like "Main" in this example, or lists:
 
->(Main){
->  (mylist)(three values here)
->  //A commentary
->  /*A block commentary. 
->  Commentaries are ignored by the compiler.
->  Thus, they don't need indents and can contain almost anything: 
-> %^#&*(@), etc. The following will close this commentary. */
->}
+(Main){
+  (mylist)(three values here)
+  //A commentary
+  /**A block commentary. 
+  Commentaries are ignored by the compiler.
+  Thus, they don't need indents and can contain almost anything: 
+ %^#&(@), etc. The following will close this commentary. **/
+}
 
 In fact, nothing really needs indents in Napoleo.
 Actually, this is pretty much all you need to know for working with Napoleo!
