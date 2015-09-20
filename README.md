@@ -5,7 +5,7 @@ While the popular XML is rather complicated, OUI, the Napoleo syntax, allows you
 
 First line should start with the version of syntax:
 
-> (napoleoversion)(2.5.2)
+(napoleoversion)(2.5.2)
 
 The file should not be of a later version than the Napoleo compiler, but may be of an earlier one.
 
